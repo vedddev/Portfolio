@@ -1254,7 +1254,15 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   // const [resumeOpen, setResumeOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(() => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    return savedTheme === "dark";
+  }
+
+  return false; // First visit = Light mode
+});
 
   // Intersection observer for navigation highlighting
   useEffect(() => {
