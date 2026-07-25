@@ -28,6 +28,7 @@ import {
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { SiX } from "react-icons/si";
 
 const globalStyles = `
 @keyframes float {
@@ -476,7 +477,8 @@ const Hero = ({  isDark }: HeroProps) => {
                 { label: 'GitHub', href: 'https://github.com/vedddev', icon: FaGithub, color: 'hover:text-slate-900 dark:hover:text-white' },
                 { label: 'LinkedIn', href: 'https://www.linkedin.com/in/veddev/', icon: FaLinkedin, color: 'hover:text-blue-500' },
                 { label: 'Kaggle', href: 'https://www.kaggle.com/', icon: KaggleIcon, color: 'hover:text-cyan-500' },
-                { label: 'Email', href: 'mailto:vedantshelake28@gmail.com', icon: MdEmail, color: 'hover:text-emerald-500' }
+                { label: 'X',href: 'https://x.com/Vedant_ios',icon: SiX,color: 'hover:text-white'},
+                { label: 'Email', href: 'mailto:vedantshelake28@gmail.com', icon: MdEmail, color: 'hover:text-emerald-500' },
               ].map((social, idx) => {
                 const IconComponent = social.icon;
                 return (
@@ -639,11 +641,11 @@ const Projects = ({ onSelectProject, isDark }: ProjectsProps) => {
   const projectList = [
     {
       id: 'traffic',
-      title: 'AI Traffic Management System',
+      title: 'Clear Path',
       shortDesc: 'Real-time vehicle detection and queue analysis using YOLO and OpenCV.',
       fullDesc: 'An intelligent computer vision system that monitors traffic flow in real-time, counts vehicles, estimates congestion levels, and dynamically calculates signal durations using custom YOLO models and OpenCV pipelines.',
       tech: ['Python', 'YOLO', 'OpenCV', 'Flask'],
-      github: 'https://github.com',
+      github: 'https://github.com/vedddev/Clear_Path',
       demo: 'https://demo.example.com',
       gradient: 'from-violet-600 to-indigo-800',
       icon: Cpu
@@ -654,7 +656,7 @@ const Projects = ({ onSelectProject, isDark }: ProjectsProps) => {
       shortDesc: 'NLP model for automated fake news classification with probability scoring.',
       fullDesc: 'End-to-end natural language processing pipeline that cleans, tokenizes, and classifies textual news articles to determine credibility and flag potential misinformation.',
       tech: ['Python', 'NLP', 'Scikit-Learn', 'EDA'],
-      github: 'https://github.com',
+      github: 'https://github.com/vedddev/Fake_News_Detection',
       demo: 'https://demo.example.com',
       gradient: 'from-blue-600 to-cyan-800',
       icon: Layers
@@ -665,8 +667,8 @@ const Projects = ({ onSelectProject, isDark }: ProjectsProps) => {
       shortDesc: 'Machine Learning model predicting optimal crop irrigation schedules.',
       fullDesc: 'Predictive analytics application leveraging soil moisture levels, ambient temperature, humidity, and weather forecasts to predict precise water requirements for smart agriculture.',
       tech: ['Python', 'Machine Learning', 'EDA', 'Feature Engineering'],
-      github: 'https://github.com',
-      demo: 'https://demo.example.com',
+      github: 'https://github.com/vedddev/Irrigation_Need',
+      demo: 'https://irrigation-need.vercel.app/',
       gradient: 'from-emerald-600 to-teal-800',
       icon: Brain
     }
@@ -1040,7 +1042,7 @@ const Contact = ({ isDark }: ContactProps) => {
                 <div className={`text-[10px] uppercase font-mono ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Social Links</div>
                 <div className="grid grid-cols-2 gap-2">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/vedddev"
                     target="_blank"
                     rel="noreferrer"
                     className={`p-2.5 rounded-xl border text-xs flex items-center gap-2 transition-all ${
@@ -1051,7 +1053,7 @@ const Contact = ({ isDark }: ContactProps) => {
                     <span>GitHub</span>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/veddev/"
                     target="_blank"
                     rel="noreferrer"
                     className={`p-2.5 rounded-xl border text-xs flex items-center gap-2 transition-all ${
@@ -1062,7 +1064,7 @@ const Contact = ({ isDark }: ContactProps) => {
                     <span>LinkedIn</span>
                   </a>
                   <a
-                    href="https://kaggle.com"
+                    href="https://www.kaggle.com/"
                     target="_blank"
                     rel="noreferrer"
                     className={`p-2.5 rounded-xl border text-xs flex items-center gap-2 transition-all ${
@@ -1072,7 +1074,22 @@ const Contact = ({ isDark }: ContactProps) => {
                     <KaggleIcon className="w-3.5 h-3.5" />
                     <span>Kaggle</span>
                   </a>
+
                   <a
+                    href="https://x.com/Vedant_ios"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`p-2.5 rounded-xl border text-xs flex items-center gap-2 transition-all ${
+                      isDark
+                        ? "bg-slate-900/60 border-white/5 text-slate-300 hover:text-white"
+                        : "bg-slate-50 border-slate-200 text-slate-700 hover:text-slate-900"
+                    }`}
+                  >
+                    <SiX size={14} />
+                    <span>X</span>
+                  </a>
+
+                  {/* <a
                     href={`mailto:${email}`}
                     className={`p-2.5 rounded-xl border text-xs flex items-center gap-2 transition-all ${
                       isDark ? 'bg-slate-900/60 border-white/5 text-slate-300 hover:text-white' : 'bg-slate-50 border-slate-200 text-slate-700 hover:text-slate-900'
@@ -1080,7 +1097,7 @@ const Contact = ({ isDark }: ContactProps) => {
                   >
                     <MdEmail size={14} />
                     <span>Email Me</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
